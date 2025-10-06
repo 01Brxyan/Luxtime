@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     margin: 0;
     padding: 0;
@@ -42,6 +44,11 @@ body {
     align-items: baseline;
 }
 
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
 
 .textoinl {
     display: flex;
@@ -74,11 +81,98 @@ body {
 }
 
 .destacados {
-    grid-column: 1/3;
     width: 90%;
-    max-width: 1200px;
+    max-width: 2000px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .destacados h2 {
-    top: 2000px;
+    font-family: "Cinzel", sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    padding-top: 100px;
+}
+
+.product-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px !important;
+}
+
+.producto-card {
+    position: relative;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    background-color: white;
+    border: 10px solid white;
+    box-sizing: border-box;
+}
+
+.info {
+    padding: 10px;
+    background-color: #0d1e37;
+}
+
+.info h3 {
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+}
+
+.info .precio {
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(184, 161, 36);
+    margin-bottom: 10px;
+}
+
+.btn-detalle {
+    background-color: rgb(184, 161, 36);
+    color: black;
+    padding: 8px 15px; 
+    border: none;
+    border-radius: 4px;
+    font-family: "Cinzel", sans-serif;
+    font-size: 0.8em; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-detalle:hover {
+    background-color: rgb(210, 180, 50);
+}
+
+.estadotag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    z-index: 10;
+}
+
+.en-stock {
+    background-color: #2cb84c;
+}
+
+.sin-stock {
+    background-color: rgb(163, 22, 22);
 }

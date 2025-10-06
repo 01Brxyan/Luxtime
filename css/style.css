@@ -20,7 +20,7 @@ body{
 
 .img {
     width: 201.1%; 
-    height: 889.1px;
+    height: 1000.px;
     margin-top: 25px;
     position: relative;
     overflow: hidden;
@@ -93,19 +93,21 @@ body{
     padding: 20px 906.2px;
 }
 
-.textoinl {
-    position: relative;
-    z-index: 2;
-}
+
 
 .textoinl h1 {
-    margin-top: 12px;
+    position: fixed;
+    z-index: 2;
+    margin-top: -10px;
     color: rgb(184, 161, 36);
     font-size: 30px;
     font-family: "Cinzel", sans-serif;
 }
 
 .nav-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
     list-style: none;
     text-decoration: none;
     margin-top: 5px;

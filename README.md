@@ -17,7 +17,7 @@ Diseñado con un enfoque en el detalle, la armonía visual y la exclusividad.
 ## 🖥️ Vista previa
 
 👉 **[Mira la página web de Luxtime aquí](https://leafy-liger-e4d807.netlify.app/)** 👈  
-*(Reemplaza el enlace por el real cuando la tengas publicada)*
+
 
 ---
 

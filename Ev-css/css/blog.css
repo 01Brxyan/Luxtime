@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header (Navbar) */
+header {
+    background-color: #2b2f27;
+    padding: 20px;
+    color: white;
+}
+
+.navbar h1 {
+    display: inline-block;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('fondo1.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Promociones Section */
+.promociones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.promo-card {
+    background-color: white;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.promo-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.promo-card h3 {
+    font-size: 1.6em;
+    color: #2b2f27;
+}
+
+.promo-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.promo-card button {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.promo-card button:hover {
+    background-color: #218838; 
+}
+
+.promociones1 {
+    background-color: white;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.promociones1:hover {
+    transform: translateY(-10px);
+}
+
+.promociones1 img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.promociones1:hover {
+    transform: translateY(-10px);
+}
+
+.promociones1 img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.promociones1 h3 {
+    font-size: 1.6em;
+    color: #2b2f27;
+}
+
+.promociones1 p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.promociones1 button {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.promociones1 button:hover {
+    background-color: #218838; 
+}
+
+
+footer {
+    background-color: #2b2f27;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 10px) {
+    .promo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-ul {
+        gap: 40px; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        height: auto; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .nav-ul {
+        gap: 30px;
+        margin-top: 5px;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .nav-ul a {
+        font-size: 0.9em;
+    }
+
+    .img {
+        height: 10px; 
+    }
+
+    .img {
+        height: 10px; 
+        top: 20px; 
+    }
+    
+    .destacados h2 {
+        padding-top: 50px; 
+    }
+
+    .promo-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .promo-card img {
+        height: 300px; 
+    }
+}
+
+@media (max-width: 768px) {
+    /* CORRECCIÓN: Quitamos el 'static' aquí para mantener la barra fija en móvil */
+    /* .header, .img, .textoinl deben permanecer 'fixed' por defecto */
+    
+    .img {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .navbar {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        margin-top: 5px;
+        padding-left: 0;
+    }
+
+    .nav-ul {
+        gap: 15px;
+        flex-wrap: wrap; 
+    }
+    
+    .destacados h2 {
+        font-size: 2em;
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* CORRECCIÓN: Asegura 1 columna */
+    .promo-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .promo-card img {
+        height: 250px; 
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .img {
+        height: 10px; 
+        top: 120px; 
+    }
+
+    .navbar a {
+        font-size: 22px;
+    }
+    
+    .nav-ul {
+        gap: 10px;
+        font-size: 0.8em;
+    }
+
+    .promociones1 img {
+        height: 250px; 
+    }
+    
+    .info h3 {
+        font-size: 1em;
+    }
+    
+    .info .precio {
+        font-size: 1.1em;
+    }
+    
+    .btn-detalle {
+        padding: 6px 10px; 
+    }
+}

@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.img {
+    position: fixed;
+    top: 0px;
+    background-image: url(../assets/images/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60px;
+    z-index: 999; 
+    padding: 10px 20px;
+    display: block;
+}
+
+.img2 {
+    position: relative;
+    width: 100%; 
+    height: 500px;
+    background-image: url(../assets/images/fondocatalogo.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 60px; 
+    z-index: -1;
+    display: block;
+}
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+}
+
+.textoinl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px; 
+    z-index: 1000;
+}
+
+.textoinl h1 {
+    margin: 0; 
+    font-size: 30px;
+    color: rgb(184, 161, 36);
+    font-family: "Cinzel", sans-serif;
+    padding-left: 10px; 
+}
+
+.nav-ul {
+    display: flex;
+    gap: 50px; 
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.nav-ul a {
+    color: white;
+    text-decoration: none; 
+    font-family: "Cinzel", sans-serif;
+}
+
+.destacados {
+    width: 90%;
+    max-width: 2000px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.destacados h2 {
+    font-family: "Cinzel", sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    padding-top: 100px;
+}
+
+.product-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px !important;
+}
+
+.producto-card {
+    position: relative;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    background-color: white;
+    border: 10px solid white;
+    box-sizing: border-box;
+}
+
+.info {
+    padding: 10px;
+    background-color: #0d1e37;
+}
+
+.info h3 {
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.info .precio {
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(184, 161, 36);
+    margin-bottom: 10px;
+}
+
+.btn-detalle {
+    background-color: rgb(184, 161, 36);
+    color: black;
+    padding: 8px 15px; 
+    border: none;
+    border-radius: 4px;
+    font-family: "Cinzel", sans-serif;
+    font-size: 0.8em; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-detalle:hover {
+    background-color: rgb(210, 180, 50);
+}
+
+.estadotag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    z-index: 10;
+}
+
+.en-stock {
+    background-color: #2cb84c;
+}
+
+.sin-stock {
+    background-color: rgb(163, 22, 22);
+}
+
+.estrella {
+    color: white;
+}
+
+@media (max-width: 1400px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-ul {
+        gap: 40px; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .textoinl {
+        flex-direction: column;
+        height: auto; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .nav-ul {
+        gap: 30px;
+        margin-top: 5px;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .nav-ul a {
+        font-size: 0.9em;
+    }
+
+    .img {
+        height: 120px; 
+    }
+
+    .img2 {
+        height: 350px; 
+        top: 120px; 
+    }
+    
+    .destacados h2 {
+        padding-top: 50px; 
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .producto-card img {
+        height: 300px; 
+    }
+}
+
+@media (max-width: 768px) {
+    /* CORRECCIÓN: Quitamos el 'static' aquí para mantener la barra fija en móvil */
+    /* .header, .img, .textoinl deben permanecer 'fixed' por defecto */
+    
+    .img {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .textoinl {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .img2 {
+        height: 250px;
+        /* CORRECCIÓN: El banner debe empezar debajo del menú apilado (aprox 120px) */
+        top: 120px; 
+    }
+
+    .textoinl h1 {
+        font-size: 25px;
+        margin-top: 5px;
+        padding-left: 0;
+    }
+
+    .nav-ul {
+        gap: 15px;
+        flex-wrap: wrap; 
+    }
+    
+    .destacados h2 {
+        font-size: 2em;
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* CORRECCIÓN: Asegura 1 columna */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .producto-card img {
+        height: 350px; 
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .img2 {
+        height: 200px; 
+        top: 120px; 
+    }
+
+    .textoinl h1 {
+        font-size: 22px;
+    }
+    
+    .nav-ul {
+        gap: 10px;
+        font-size: 0.8em;
+    }
+
+    .producto-card img {
+        height: 250px; 
+    }
+    
+    .info h3 {
+        font-size: 1em;
+    }
+    
+    .info .precio {
+        font-size: 1.1em;
+    }
+    
+    .btn-detalle {
+        padding: 6px 10px; 
+    }
+}

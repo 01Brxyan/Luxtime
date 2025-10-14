@@ -1,0 +1,409 @@
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    background-color: #fafafa;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url(../assets/images/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 200;
+}
+
+.textoinl {
+    display: none; 
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.logo-subpage {
+    display: none; 
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-ul a {
+    font-family: "Cinzel";
+    color: white;
+    padding: 5px 0;
+    transition: color 0.3s;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.nav-ul a:hover {
+    color: rgb(184, 161, 36);
+}
+
+.product-detail-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail-images img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-images img:hover,
+.thumbnail-images img.active {
+    border-color: rgb(184, 161, 36);
+    transform: scale(1.05);
+}
+
+.product-info {
+    width: 100%;
+    padding: 10px;
+    order: 2;
+}
+
+.product-title {
+    font-family: "Cinzel", sans-serif;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.product-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.product-specs h3,
+.product-options h3,
+.product-options h4 {
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.product-specs ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.product-specs ul li {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.product-specs ul li::before {
+    content: '•';
+    color: rgb(184, 161, 36);
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.option-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.strap-selector {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selected-strap {
+    font-weight: bold;
+    color: rgb(184, 161, 36);
+    margin-left: 5px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.engraving-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.engraving-input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.purchase-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    gap: 15px;
+}
+
+.product-price {
+    font-family: "Cinzel", sans-serif;
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-price .current-price {
+    color: rgb(184, 161, 36);
+}
+
+.add-to-cart-btn {
+    background-color: rgb(184, 161, 36);
+    color: #333;
+    padding: 15px 30px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-family: "Cinzel", sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(184, 161, 36, 0.4);
+}
+
+.add-to-cart-btn:hover {
+    background-color: rgb(210, 180, 50);
+    transform: translateY(-2px);
+}
+
+.main-footer {
+    background-color: #0d1e37;
+    color: white;
+    padding: 30px 20px;
+    border-top: 5px solid rgb(184, 161, 36);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-content h3, .footer-content h4 {
+    font-family: "Cinzel", sans-serif;
+    margin-bottom: 10px;
+    color: rgb(184, 161, 36);
+}
+
+.footer-brand p {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 0.9em;
+    line-height: 1.6;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: rgb(184, 161, 36);
+}
+
+.footer-contact p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+@media (max-width: 767px) {
+    .nav-ul {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .product-title {
+        font-size: 1.8em;
+    }
+
+    .main-image img {
+        max-width: 90%;
+    }
+
+    .add-to-cart-btn {
+        width: 90%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 0 40px;
+    }
+
+    .nav-ul {
+        gap: 40px;
+    }
+
+    .product-detail-page {
+        flex-direction: row;
+        gap: 40px;
+        margin: 100px auto 80px auto;
+    }
+
+    .product-gallery {
+        flex: 1;
+        width: 45%;
+        order: 1;
+    }
+    
+    .main-image img {
+        max-width: 100%;
+    }
+
+    .product-info {
+        flex: 1;
+        width: 50%;
+        order: 2;
+        padding: 0;
+    }
+
+    .product-title {
+        font-size: 2.8em;
+        text-align: left;
+    }
+
+    .product-price {
+        font-size: 2.2em;
+    }
+
+    .purchase-area {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .add-to-cart-btn {
+        width: auto;
+        padding: 18px 40px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 0 80px;
+    }
+    
+    .product-gallery {
+        min-width: 500px;
+    }
+    
+    .product-info {
+        min-width: 450px;
+    }
+}

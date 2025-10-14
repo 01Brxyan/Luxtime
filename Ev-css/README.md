@@ -14,6 +14,11 @@ Diseñado con un enfoque en el detalle, la armonía visual y la exclusividad.
 
 ---
 
+
+# Examen
+Se implemento un nuevo card de noticias con sus respectivos 3 articulos 
+--- 
+
 ## 🖥️ Vista previa
 
 👉 **[Mira la página web de Luxtime aquí](https://leafy-liger-e4d807.netlify.app/)** 👈  
